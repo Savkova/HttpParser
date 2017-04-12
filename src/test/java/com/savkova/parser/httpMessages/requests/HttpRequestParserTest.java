@@ -1,4 +1,4 @@
-package com.savkova.parser.requests;
+package com.savkova.parser.httpMessages.requests;
 
 import static org.junit.Assert.*;
 
@@ -14,20 +14,20 @@ public class HttpRequestParserTest extends HttpRequestParser {
     public void parse() throws Exception {
 
         HttpRequestParser httpRequestParser = new HttpRequestParser();
-        HttpRequest httpRequest = httpRequestParser.parse(message);
+        MyHttpRequest myHttpRequest = httpRequestParser.parse(message);
 
-        assertNotNull("HttpRequest created.", httpRequest);
+        assertNotNull("MyHttpRequest created.", myHttpRequest);
 
         String expectedResult = "GET";
-        String actualResult = httpRequest.getRequestLine().getMethod();
+        String actualResult = myHttpRequest.getRequestLine().getMethod();
         assertEquals(expectedResult, actualResult);
 
         expectedResult = "/recordpoint";
-        actualResult = httpRequest.getRequestLine().getUri();
+        actualResult = myHttpRequest.getRequestLine().getUri();
         assertEquals(expectedResult, actualResult);
 
         expectedResult = "HTTP/1.1";
-        actualResult = httpRequest.getRequestLine().getProtocolVersion();
+        actualResult = myHttpRequest.getRequestLine().getProtocolVersion();
         assertEquals(expectedResult, actualResult);
     }
 

@@ -1,14 +1,16 @@
-package com.savkova.parser.requests;
+package com.savkova.parser.httpMessages.requests;
 
-public class HttpRequestLine {
+import java.util.Map;
+
+public class MyHttpRequestLine {
 
     private String method;
     private String protocolVersion;
     private String uri;
-    private String params; // map
+    private Map<String, String> params;
 
 
-    public HttpRequestLine(String method, String protocolVersion, String uri, String params) {
+    MyHttpRequestLine(String method, String protocolVersion, String uri, Map<String, String> params) {
         this.method = method;
         this.protocolVersion = protocolVersion;
         this.uri = uri;
@@ -27,13 +29,13 @@ public class HttpRequestLine {
         return uri;
     }
 
-    public String getParams() {
+    public Map<String, String> getParams() {
         return params;
     }
 
     @Override
     public String toString() {
-        return "HttpRequestLine{" +
+        return "MyHttpRequestLine{" +
                 "method:'" + method + '\"' +
                 ", protocolVersion:'" + protocolVersion + '\"' +
                 ", uri:'" + uri + '\"' +
@@ -41,3 +43,4 @@ public class HttpRequestLine {
                 '}';
     }
 }
+

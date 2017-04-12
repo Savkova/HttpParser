@@ -1,29 +1,32 @@
-package com.savkova.parser.requests;
+package com.savkova.parser.httpMessages.requests;
 
 import java.util.Map;
 
-public class HttpRequest implements HttpRequestMessage {
-
-    private HttpRequestLine requestLine;
+public class MyHttpRequest implements MyHttpRequestMessage {
+    private MyHttpRequestLine requestLine;
     private Map<String, String> headers;
     private String body;
 
-    public HttpRequest(HttpRequestLine requestLine) {
+    MyHttpRequest(MyHttpRequestLine requestLine) {
         this.requestLine = requestLine;
     }
 
-    public HttpRequest(HttpRequestLine requestLine, Map<String, String> headers, String body) {
+    MyHttpRequest(MyHttpRequestLine requestLine, Map<String, String> headers, String body) {
         this.requestLine = requestLine;
         this.headers = headers;
         this.body = body;
     }
 
-    public HttpRequestLine getRequestLine() {
+    public MyHttpRequestLine getRequestLine() {
         return requestLine;
     }
 
     public Map<String, String> getHeaders() {
         return headers;
+    }
+
+    public String getBody() {
+        return body;
     }
 
     public String getProtocolVersion() {
