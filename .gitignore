@@ -10,7 +10,6 @@
 .idea/*
 target/
 *.iml
-src/main/java/com/savkova/parser/Main.java
 ##
 
 

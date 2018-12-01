@@ -1,6 +1,6 @@
-package com.savkova.parser.httpMessages.requests;
+package com.savkova.parser.requests;
 
-import com.savkova.parser.httpMessages.HttpMessage;
+import com.savkova.parser.HttpMessage;
 
 public interface MyHttpRequestMessage extends HttpMessage {
     MyHttpRequestLine getRequestLine();

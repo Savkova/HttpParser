@@ -1,4 +1,4 @@
-package com.savkova.parser.httpMessages;
+package com.savkova.parser;
 
 public interface HttpMessage {
 

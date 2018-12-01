@@ -1,4 +1,4 @@
-package com.savkova.parser.httpMessages.requests;
+package com.savkova.parser.requests;
 
 import java.util.Map;
 
