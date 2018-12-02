@@ -15,7 +15,7 @@ public class Main {
                 "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_91)\n" +
                 "Accept-Encoding: gzip,deflate";
 
-        final String body = "Some impotent info";
+        final String body = "Some important info";
 
         final String message = requestLine + " " + protocolVersion + "\n" + headers + "\n\n" + body;
 
