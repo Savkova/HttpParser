@@ -36,10 +36,10 @@ public class MyHttpRequestLine {
     @Override
     public String toString() {
         return "MyHttpRequestLine{" +
-                "method:'" + method + '\"' +
-                ", protocolVersion:'" + protocolVersion + '\"' +
-                ", uri:'" + uri + '\"' +
-                ", params:'" + params + '\"' +
+                "method:'" + method + '\'' +
+                ", protocolVersion:'" + protocolVersion + '\'' +
+                ", uri:'" + uri + '\'' +
+                ", params:'" + params + '\'' +
                 '}';
     }
 }
