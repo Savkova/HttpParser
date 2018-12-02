@@ -23,7 +23,7 @@ public class Main {
 
         MyHttpRequest myHttpRequest = httpRequestParser.parse(message);
 
-        System.out.println(myHttpRequest.getRequestLine().toString());
+        System.out.println(myHttpRequest.getRequestLine());
         System.out.println(myHttpRequest.getProtocolVersion());
         System.out.println(myHttpRequest.getHeaders());
         System.out.println(myHttpRequest.getBody());
