@@ -29,7 +29,7 @@ public class Main {
         System.out.print(myHttpRequest.getRequestLine().getUri() + " ");
         System.out.println(myHttpRequest.getRequestLine().getProtocolVersion());
         for (Map.Entry<String, String> entry : myHttpRequest.getHeaders().entrySet()) {
-            System.out.println(entry.getKey() + "=" + entry.getValue());
+            System.out.println(entry.getKey() + ": " + entry.getValue());
         }
         System.out.println();
         System.out.println(myHttpRequest.getBody());
